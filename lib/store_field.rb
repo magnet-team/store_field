@@ -24,6 +24,8 @@ module StoreField
         value
       end
 
+      options[:keys] = options[:keys].map(&:to_s)
+
       # Utility methods for Hash
       if klass == Hash and options[:keys]
         options[:keys].each do |subkey|
