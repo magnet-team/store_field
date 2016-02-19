@@ -24,7 +24,7 @@ module StoreField
         send(store_attribute)[key]
       end
 
-      options[:keys] = options[:keys].map(&:to_s)
+      options[:keys] = options[:keys].map(&:to_s) if options[:keys]
 
       # Utility methods for Hash
       if klass == Hash and options[:keys]
