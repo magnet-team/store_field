@@ -21,7 +21,7 @@ module StoreField
           value = klass.new
           send(store_attribute)[key] = value
         end
-        value
+        send(store_attribute)[key]
       end
 
       options[:keys] = options[:keys].map(&:to_s)
